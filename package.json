@@ -1,0 +1,28 @@
+{
+  "name": "pollhub",
+  "version": "1.0.0",
+  "description": "Website that allows users to share polls",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SAMAHM9797/PollHub.git"
+  },
+  "author": "Sameer Ahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SAMAHM9797/PollHub/issues"
+  },
+  "homepage": "https://github.com/SAMAHM9797/PollHub#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9",
+    "mongoose": "^4.10.7",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}
