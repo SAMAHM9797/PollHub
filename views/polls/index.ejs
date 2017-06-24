@@ -1,0 +1,29 @@
+<% include ../partials/header %> 
+<head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    
+</head>
+ <div class="container">
+     <header class="jumbotron">
+         <div class="container">
+             <h1>Welcome To PollHub!</h1>
+             <p>View our lastest polls</p>
+             <p>
+                <a class="btn btn-primary btn-large" href="/polls/new">Add New Poll</a>
+             </p>
+         </div>
+     </header>
+     
+     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+       <% polls.forEach(function(poll){ %>
+         <div class="col-md-12 poll">
+            <h4><%= poll.name %></h4>
+            <p>
+                <a href="/polls/<%= poll._id %>" class="btn btn-primary">More Info</a>
+            </p>
+        </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>

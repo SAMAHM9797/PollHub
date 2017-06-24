@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+<head>
+
+    <script>
+        var data = [];
+    </script>
+</head>
+<%poll.options.forEach(function(poll){ %>
+       <script>
+            data.push(<%=poll.votes%>);
+        </script> 
+<% }); %>
+<div class="container">
+    <div class = "row">
+        <div class = "col-md-12 box">
+        <canvas width="960" height="500"></canvas>
+          <h1><%= poll.options %></h1>
+       <script>console.log(data);</script>
+         </div>
+    </div>
+    
+</div>
+
+<% include ../partials/footer %>

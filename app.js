@@ -7,13 +7,17 @@ var express        = require("express"),
     passport       = require("passport"),
     LocalStrategy  = require("passport-local"),
     User           = require("./models/user"),
-    methodOverride = require("method-override");
+    methodOverride = require("method-override"),
+    d3             = require("d3");
 
 // var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v10";
 // mongoose.connect(url);
 
-//mongoose.connect("mongodb://localhost/poll_hub");
+mongoose.connect("mongodb://localhost/poll_hub");
 
+var pollRoutes = require("./routes/poll"),
+    //userRoutes = require("./routes/campground"),
+    indexRoutes        = require("./routes/index");
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
@@ -45,8 +49,8 @@ app.use(function(req, res, next){
    next();
 });
 
-//app.use("/", indexRoutes);
-//app.use("/campgrounds", campgroundRoutes);
+app.use("/", indexRoutes);
+app.use("/polls", pollRoutes);
 //app.use("/campgrounds/:id/comments", commentRoutes);
 
 

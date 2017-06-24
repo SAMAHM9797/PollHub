@@ -9,7 +9,7 @@
     <nav class = "navbar navbar-default">
         <div class = "container-fluid">
             <div class = "navbar-header">
-                <a class = "navbar-brand" href = "/campgrounds" >YelpCamp</a>
+                <a class = "navbar-brand" href = "/" >YelpCamp</a>
             </div>
           
             <div class = "collapse navbar-collapse">
@@ -18,7 +18,9 @@
                     <li><a href = "/login">Login</a></li>
                     <li><a href = "/register">Register</a></li>
                 <% } else { %>
-                    <li><a href = "#">Signed in as <%= currentUser.username%></a></li>
+                    <li><a href = "#">Hi <%=currentUser.username%></a></li>
+                      <li><a href = "#">New Poll</a></li>
+                      <li><a href = "#">My Poll</a></li>
                     <li><a href = "/logout">Logout</a></li>
                 <%  } %>
                 </ul>

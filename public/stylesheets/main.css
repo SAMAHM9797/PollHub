@@ -7,3 +7,14 @@
 body{
     background-color:#2C363F;
 }
+
+h1{
+    color:white;
+}
+
+.box{
+    background-color:red;
+     width: 70%;
+    margin: 0 auto;
+    height:500px;
+}

@@ -5,7 +5,7 @@ var pollSchema = new mongoose.Schema({
    options: [
        {
            title: String,
-           votes: String 
+           votes: { type: Number, default: 1 }
        }
     ],
     author:{
@@ -14,7 +14,17 @@ var pollSchema = new mongoose.Schema({
             ref  : "User"
         },
         username: String
-    }
+    },
+    // voters:[
+    //     {
+    //     id:{
+    //         type : mongoose.Schema.Types.ObjectId,
+    //         ref  : "User"
+    //     },
+    //     username: String
+    //     }
+    // ]
+    
 });
 
 module.exports = mongoose.model("Poll", pollSchema);
